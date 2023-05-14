@@ -1,0 +1,35 @@
+
+def main(x, y):
+    c2f = x*9/5+32
+    f2c = (x-32)*5/9
+    c2k = x + 273.15
+    k2c = x - 273.15
+    f2k = (x+459.67)*5/9
+    k2f = (x-273.15)*9/5+32
+    f2r = x + 459.67
+    r2f = x - 459.67
+    c2r = x*9/5 + 491.67
+    r2c = (x-491.67)*5/9
+    k2r = x*9/5
+    r2k = x*5/9
+    """
+    F
+    R
+    K
+    C
+    """
+    if y == 1:
+        print(f2r, f2k, f2c)
+    if y == 2:
+        print(r2f, r2k, r2c)
+    if y == 3:
+        print(k2f, k2r, k2c)
+    if y == 4:
+        print(c2f, c2r, c2k)
+# Τα αποτελεσματα βγαινουν με την ιδια σειρα με την οποια συμπληρωνεις τον πινακα κατακορυφα απο πανω προς τα κατω
+
+
+if __name__ == '__main__':
+    temp = int(input("Enter temperature: "))
+    unit = int(input("Enter corresponding number to unit used.\n1.F\n2.R\n3.K\n4.C\n\n"))
+    main(temp, unit)
